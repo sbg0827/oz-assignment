@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+        기호와 함께 사용하는 속성 선택자
+        * : 값의 포함 여부
+        ^ : 값의 시작 여부
+        $ : 값의 끝 여부
+        */
+[width $= "0" ]{
+    border: 5px dashed red;
+}
+
+p > em{
+    color: blue;
+}
+
+/* 
+형제 선택자는 뒤이어 등장하는 형제들을 대상으로 한다!
+*/
+    #sam ~ p{
+        color: orange;
+    }
+
+    </style>
+</head>
+<body>
+    <img src="images/탄이.jpg" width="120" alt="대전">
+    <img src="images/탄이.jpg" width="120">
+    <img src="images/탄이.jpg" width="120" id="sam">
+    <p>aaaasdfasdfasdfasdfasdf</p>
+    <p>aaaasdfasdfasdfasdfasdf</p>
+    <p>aaaasd<em>fasdfasd</em>fasdfasdf</p>
+    <p>aaaasdfasdfasdfasdfasdf</p>
+</body>
+</html>
